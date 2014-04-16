@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "Gerrit Be Positive",
+  "version": "0.0.1",
+  "description": "Forces to be always positive in gerrit reviews",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "images/icon-19.png",
+    "default_title": "Gerrit Be Positive"
+  },
+  "permissions": [
+    "tabs",
+    "alarms",
+    "declarativeContent",
+    "https://gerrit.spotify.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://gerrit.spotify.net/*"],
+      "js": ["disable-minus-2.js"]
+    }
+  ],
+  "icons": {
+    "19" : "images/icon-19.png",
+    "48" : "images/icon-48.png",
+    "128" : "images/icon-128.png"
+  }
+}
