@@ -1,4 +1,4 @@
-function disableMinus2() {
+(function disableMinus2() {
   var body_xpath = '//*[@id="gerrit_body"]/div/div/div/div/form/div/div[1]/table/tbody';
   var result = document.evaluate(body_xpath, document, null, XPathResult.ANY_TYPE, null);
   var body = result.iterateNext();
@@ -16,5 +16,4 @@ function disableMinus2() {
       }
     }
   }
-}
-disableMinus2();
+})()
